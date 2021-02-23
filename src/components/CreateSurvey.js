@@ -68,6 +68,8 @@ function CreateSurvey(props) {
             onChange={(event) => {
               setslct(true);
               setval(event.target.value);
+              if (event.target.value === "single-select")
+              setarray([{ text: "Yes" }, { text: "No" }]);
             }}
           >
             <option value="do-select">Select Question Type</option>
